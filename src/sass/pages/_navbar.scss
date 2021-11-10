@@ -1,0 +1,35 @@
+nav {
+    height: 5rem;
+    background-color: $mainColor;
+    @include flexBox(center, center);
+    .nav-center {
+        width: 90vw;
+        @include flexBox(space-between, center);
+        h3 {
+            font-size: 2rem;
+            color: $whiteColor;
+        }
+        .nav-container {
+            position: relative;
+            cursor: pointer;
+            svg {
+                font-size: 2rem;
+                color: $whiteColor;
+            }
+            .amount-container {
+                position: absolute;
+                top: -0.85rem;
+                right: -0.85rem;
+                width: 1.75rem;
+                height: 1.75rem;
+                border-radius: $rounded;
+                background-color: #85c6f4;
+                @extend %centerBox;
+                .total-amount {
+                    font-size: 1.25rem;
+                    color: $whiteColor;
+                }
+            }
+        }
+    }
+}
